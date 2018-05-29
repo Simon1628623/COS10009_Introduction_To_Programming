@@ -1,0 +1,124 @@
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using System.ComponentModel;
+
+class Contact
+{
+	public string Name {get; set;}
+	public string Email {get; set;}
+	public int Age {get; set;}
+
+	//other functions here for contact
+
+	public string Details
+	{
+		get
+		{
+		return Name + " (" + Email + ") aged" + Age;
+		}
+
+	}
+
+}
+
+class FriendWindow
+{
+	private BindingList<Contact> _contacts = new BindingList<Contact>();
+
+	private Form_friendForm;
+	private TextBox _nameText;
+	private TextBox _emailText;
+	private TextBox _ageText;
+	private ListBox _contactList;
+
+	public FriendWindow()
+	{
+		_friendForm = new Form();
+
+		Label nameLabel = new Label();
+		nameLabel.Text = "Name: ";
+		nameLabel.Left = 10;
+		nameLabel.Top = 10;
+		_friendForm.Controls.Add(nameLabel);
+
+		Label emailLabel = new Label();
+		emailLabel.Text = "Email: ";
+		emailLabel.Left = 10;
+		emailLabel.Top = 40;
+		_friendForm.Controls.Add(emailLabel);
+
+		Label ageLabel = new Label();
+		ageLabel.Text = "Age: ";
+		ageLabel.Left = 10;
+		ageLabel.Top = 70;
+		_friendForm.Controls.Add(ageLabel);
+
+		_nameText = new TextBox();
+		_nameText.Left = 120;
+		_nameText.Top = 10;
+		_friendForm.Controls.Add(_nameText);
+
+		_emailText = new TextBox();
+		_emailText.Left = 120;
+		_emailText.Top = 40;
+		_friendForm.Controls.Add(_emailText);
+
+		_ageText = new TextBox();
+		_ageText.Left = 120;
+		_ageText.Top = 70;
+		_friendForm.Controls.Add(_ageText);
+
+		Button addButton = new Button();
+		addButton.Text = "Add";
+		addButton.Left = 120;
+		addButton.Top = 100;
+		addButton.Click += AddButtonClick;
+		_friendForm.Controls.Add(addButton);
+
+		_contactList = new ListBox();
+		_contactList.Left = 10;
+		_contactList.Top = 130;
+		_contactList.Width = _friendForm.Width - 20;
+		_contactList.Height = _friendForm.Height - 140;
+		_friendForm.Controls.Add(_contactList);
+
+		_contactList.DataSource = _contacts;
+		_contactList.DisplayMember = "Details";
+	}
+
+	private void AddButtonClick(object sender, EventArgs args)
+	{
+		Contact newContact = new Contact();
+
+		newContact.Name = _nameText.Text;
+		newContact.Email = _emailText.Text;
+		int age = 0;
+		int.TryParse(_ageText.Text, out age);
+		newContact.Age = age;
+
+		_contacts.Add(newContact);
+
+		_nameText.Text = "";
+		_emailText.Text = "";
+		_ageText.Text = "";
+	}
+
+	public void Run()
+	{
+		_friendForm.ShowDialog();
+	}
+
+}
+
+class FriendBookProg
+{
+	public static void Main()
+	{
+		//creates a friend window
+		FriendWindow mainForm = new FriendWindow();
+		//runs friendwindow
+		mainForm.Run();
+	}
+
+}

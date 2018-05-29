@@ -1,0 +1,31 @@
+Variable
+	Setting a value to the variable
+		Assignment
+	Similar to Variable but cannot be changed
+		Constant
+	What is contained inside the Variable
+		Value
+	Different Types of Variables
+			Global Variable
+				What sort of value is it?
+					Type
+						integer
+						string
+						bool
+						double
+			Local Variable
+				What sort of value is it?
+					Type
+						integer
+						string
+						bool
+						double
+			Parameter
+				What sort of value is it?
+					Type
+						integer
+						string
+						bool
+						double
+						
+			

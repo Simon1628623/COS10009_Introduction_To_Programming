@@ -1,0 +1,177 @@
+//spare code
+
+// function RandomBlock() : BlockData;
+// begin
+    
+//      result.kind := RandomBlockType();
+    
+//     // matching bitmap with blocktype
+//     result.bmp := blockBitmap(result.kind);
+
+
+//     //will need to fix this up possibly use multidimension array refer to game of life 7_1
+//     result.x := Rnd(ScreenWidth() - BitmapWidth(result.bmp));
+//     result.y := Rnd(ScreenHeight() - BitmapHeight(result.bmp));
+// end;
+
+
+//sets up blocks in the game
+//not sure if does anything same as generateblocks
+// procedure SetupBlocks(var grid: BlockGrid);
+// var
+//     col, row: Integer;
+// begin
+//     for col := 0 to COLUMNS - 1 do
+//     begin
+//         for row := 0 to ROWS - 1 do
+//         begin
+//             // Randomly set each cell to true/false
+//             grid[col, row] := Rnd() > 0.5 ;
+            
+//         end;
+//     end;
+// end;
+
+
+
+// procedure GenerateBlocks(var game: GameData; numBlocks: Integer);
+// var
+//  i: Integer;
+// begin
+//    SetLength(game.blocks, numBlocks);
+
+
+//     for i := 0 to high(game.blocks) do
+//     begin
+//     game.blocks[i] := RandomBlock();
+//     end;
+// end;
+
+
+// Procedure DrawBlocks(const game: GameData);
+// var
+//     i: Integer;
+// begin
+//     for i:=0 to High(game.blocks) Do
+//     begin
+//         DrawBlock(game.blocks[i]);
+//     end;
+// end;
+
+
+
+
+ //ball collides with paddle here
+     //if ball is greater than players x pos, stopping ball if left onwards
+    if game.player.x <= game.ball.x + BallWidth(game.ball) then
+    begin
+        
+        // //sending ball sideways
+        // game.ball.dx += 1;
+        // //adding if top half or bottom half of paddle to go either up or down
+        // //top half
+        // if game.player.y + PlayerHeight(game.player)/2 <= game.ball.y + BallHeight(game.ball)/2 then
+        // begin
+        //     game.ball.dx += 2;
+        //     game.ball.dy += -2; 
+        // end;
+        // //bottom half
+        //  if game.player.y + PlayerHeight(game.player)/2 >= game.ball.y + BallHeight(game.ball)/2 then
+        // begin
+        //     game.ball.dx += 2;
+        //     game.ball.dy += -2; 
+        // end;
+
+        //will add directional play depending on side 
+         //possibly add player speed effects ball speed
+
+        //stopping ball if towards right side
+        if game.ball.x <= game.player.x + PlayerWidth(game.player) then
+        begin
+           
+
+            //top 
+            if game.player.y <= game.ball.y + BallHeight(game.ball) then
+            begin
+                
+                //making sure it isn't below the bottom of the player
+                if game.player.y + PlayerHeight(game.player) >=  game.ball.y + BallHeight(game.ball) then
+                begin
+                    game.ball.dy += -3;
+                    game.ball.dx += -1;
+                end;
+                
+               //bottom
+                if game.player.y + PlayerHeight(game.player) <= game.ball.y then
+                begin
+                    //minimum boundary
+                    if game.player.y + PlayerHeight(game.player) + BallHeight(game.ball) >= game.ball.y then
+                    begin
+                    game.ball.dy += 3;
+                    game.ball.dx += 1;
+                    end;
+ 
+                end;
+            end;
+        end;    
+    end; 
+	
+	
+	
+	 // //sending ball sideways
+        // game.ball.dx += 1;
+        // //adding if top half or bottom half of paddle to go either up or down
+        // //top half
+        // if game.player.y + PlayerHeight(game.player)/2 <= game.ball.y + BallHeight(game.ball)/2 then
+        // begin
+        //     game.ball.dx += 2;
+        //     game.ball.dy += -2; 
+        // end;
+        // //bottom half
+        //  if game.player.y + PlayerHeight(game.player)/2 >= game.ball.y + BallHeight(game.ball)/2 then
+        // begin
+        //     game.ball.dx += 2;
+        //     game.ball.dy += -2; 
+        // end;
+
+        //will add directional play depending on side 
+         //possibly add player speed effects ball speed
+
+                 
+				 
+	 // //left
+            // if (game.blocks[col].x < game.ball.x + BallWidth(game.ball)) then
+            // begin
+            //     //right
+            //     if (game.blocks[col].x + CELL_WIDTH > game.ball.x ) then
+            //     begin
+
+
+            //         //top
+            //         if (game.blocks[row].y < game.ball.y + BallHeight(game.ball)) then
+            //         begin
+            //             if (game.blocks[row].y + CELL_WIDTH > game.ball.y) then
+            //             begin
+            //                 game.grid[col, row] := false;
+            //                 game.player.score += 1;
+
+            //                 //will need to fix up later
+                           
+            //             end;
+            //         end;
+            //     end;
+            // end;
+			
+			
+			// if KeyDown(vk_SPACE) then
+    // begin
+    //     game.ball.dx := -3;
+    //     game.ball.dy := -3;
+        
+    // end;
+
+    // repeat
+   
+    // game.ball.x := (game.player.x) + (PlayerWidth(game.player)/2);
+    // game.ball.y := (game.player.y) - (PlayerHeight(game.player)/1.5);
+    // until AnyKeyPressed();

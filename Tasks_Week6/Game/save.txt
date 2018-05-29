@@ -1,0 +1,42 @@
+HighScores
+###########################
+#asdfghj : 10
+ 
+#sk : 10
+ 
+# : 21
+ 
+#cdfvgh : 21
+ 
+#sdfghj : 14
+ 
+#dfgh : 14
+ 
+#lkjhg : 0
+ 
+#kjh : 0
+ 
+#sdfg : 0
+ 
+#dfg : 0
+ 
+#asdfghju : 0
+ 
+#defrghj : 0
+ 
+#sdfghj : 0
+ 
+#sdfghj : 0
+ 
+#dfghu : 0
+ 
+#dfgh : 0
+ 
+#dtgyh : 40
+ 
+#sdfgh : 40
+ 
+#asdf : 69
+ 
+#asdf : 69
+ 

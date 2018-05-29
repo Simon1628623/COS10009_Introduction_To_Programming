@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>New Mind Map</title>
+<style>
+	* { font-family: Verdana, Arial, Helvetica, sans-serif; border-color: #FFFFFF;}
+	label { cursor: text; clear: both; display: block; }
+	li { padding: 10px; margin: 2px; list-style: none none; -moz-border-radius: 10px; border-radius: 10px; }
+	ul { margin: 2px 2px 2px 15px; padding: 5px; }
+	ul.top, ul.topnocolors { margin: 0; border-color: #FFFFFF; }
+	ul.topnocolors li{ border: 2px solid #999999; }
+	ul.top li{ border: 2px solid white; }
+	a.anchor { background-color:#FFFFFF; padding: 2px 5px; color: #006699; -moz-border-radius: 2px; border-radius: 2px; }
+	a.anchor:hover { background-color:#006699; color: #ffffff; }
+	a.link { background-color:#FFFFFF; padding: 2px; color: #006699; }
+	a.link:hover { background-color:#006699; color: #ffffff; }
+	.parentLabel { border: 1px outset; float: left; clear: both; padding: 2px 5px; font-size: 80%; -moz-border-radius: 3px; border-radius: 3px; }
+	.directionalLines { padding: 2px; font-size: 80%;}
+	.directionalLines a { margin-right: 4px; border: 1px outset; text-decoration: none; padding: 2px 5px; -moz-border-radius: 3px; border-radius: 3px; }
+	.footer { font-size: 80%; color: #CCCCCC; padding-top: 5px; margin-top: 5px; border-top: 2px solid #CCCCCC;}
+</style>
+</head>
+<body><ul class="top">
+  <li id="3" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="3"/>
+      <a>Program</a>
+    </label>
+    <div class="directionalLines">
+      <a href="#4" class="anchor">-&gt; Each Instruction is a</a>
+      <a href="#11" class="anchor">-&gt; Has a name that is a</a>
+      <a href="#10" class="anchor">-&gt; Can use Procedures from a</a>
+      <a href="#15" class="anchor">-&gt; Compiler</a>
+      <a href="#16" class="anchor">-&gt; Need a computer to run program</a>
+      <a href="#17" class="anchor">-&gt; You create the Program</a>
+    </div>
+  </li>
+  <li id="4" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="4"/>
+      <a>Statement</a>
+    </label>
+    <ul>
+      <li id="24" style="background-color: #bfff66; color: #333333;" pid="4">
+        <label>
+          <a name="24"/>
+          <a>Term</a>
+        </label>
+      </li>
+    </ul>
+  </li>
+  <li id="5" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="5"/>
+      <a>Procedure Call</a>
+    </label>
+    <div class="directionalLines">
+      <a href="#4" class="anchor">-&gt; Is a kind of</a>
+      <a href="#9" class="anchor">-&gt; Calls a</a>
+      <a href="#6" class="anchor">-&gt; All values passed to the procedure is an</a>
+    </div>
+    <ul>
+      <li id="23" style="background-color: #bfff66; color: #333333;" pid="5">
+        <label>
+          <a name="23"/>
+          <a>Action</a>
+        </label>
+      </li>
+    </ul>
+  </li>
+  <li id="6" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="6"/>
+      <a>Expression</a>
+    </label>
+    <div class="directionalLines">
+      <a href="#8" class="anchor">-&gt; The value has a</a>
+    </div>
+    <ul>
+      <li id="7" style="background-color: #bfff66; color: #333333;" pid="6">
+        <label>
+          <a name="7"/>
+          <a>Term</a>
+        </label>
+      </li>
+    </ul>
+  </li>
+  <li id="8" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="8"/>
+      <a>Type</a>
+    </label>
+    <ul>
+      <li id="27" style="background-color: #bfff66; color: #333333;" pid="8">
+        <label>
+          <a name="27"/>
+          <a>Artefact</a>
+        </label>
+      </li>
+    </ul>
+  </li>
+  <li id="9" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="9"/>
+      <a>Procedure</a>
+    </label>
+    <div class="directionalLines">
+      <a href="#11" class="anchor">-&gt; has a name that is an</a>
+      <a href="#13" class="anchor">-&gt; Is an Artefact</a>
+    </div>
+    <ul>
+      <li id="26" style="background-color: #bfff66; color: #333333;" pid="9">
+        <label>
+          <a name="26"/>
+          <a>Artefact</a>
+        </label>
+      </li>
+    </ul>
+  </li>
+  <li id="10" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="10"/>
+      <a>Library</a>
+    </label>
+    <div class="directionalLines">
+      <a href="#11" class="anchor">-&gt; Has a name that is an</a>
+      <a href="#9" class="anchor">-&gt; can be used to hold a</a>
+    </div>
+    <ul>
+      <li id="25" style="background-color: #bfff66; color: #333333;" pid="10">
+        <div class="parentLabel">└ Something you can make</div>
+        <label>
+          <a name="25"/>
+          <a>Artefact</a>
+        </label>
+      </li>
+    </ul>
+  </li>
+  <li id="11" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="11"/>
+      <a>Identifier</a>
+    </label>
+    <ul>
+      <li id="28" style="background-color: #bfff66; color: #333333;" pid="11">
+        <label>
+          <a name="28"/>
+          <a>Term</a>
+        </label>
+      </li>
+    </ul>
+  </li>
+  <li id="13" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="13"/>
+      <a>Performs a task when called</a>
+    </label>
+  </li>
+  <li id="15" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="15"/>
+      <a>Compiler</a>
+    </label>
+    <div class="directionalLines">
+      <a href="#16" class="anchor">-&gt; Needs computer to compile</a>
+    </div>
+  </li>
+  <li id="16" style="background-color: #ffff66; color: #333333;" pid="0">
+    <label>
+      <a name="16"/>
+      <a>Computer</a>
+    </label>
+  </li>
+  <li id="17" style="background-color: #87ff43; color: #333333;" pid="0">
+    <label>
+      <a name="17"/>
+      <a>Artefact</a>
+    </label>
+  </li>
+</ul>
+<div class="footer">This outline was generated with <a href="http://bubbl.us" target="_blank" class="link">bubbl.us</a></div>
+</body>
+</html>
